@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Cormorant Garamond';
+}

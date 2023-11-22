@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 0.7em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "eins zwei drei"
+    "vier fuenf sechs"
+    "sieben acht neun";
+    gap: 1em;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+    height: 100%;
+}
+
+p {
+    color: white;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

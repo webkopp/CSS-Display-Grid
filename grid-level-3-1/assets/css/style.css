@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-color: #745cf9;
+    --button-color-hover: #5234f9;
+    --p-color: #8c979e;
+    --h2-color: #0e1015;
+}
+
+
+html {
+    font-family: 'Raleway';
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+/* 
+Weiter geht es mit deinem Shapely-Projekt: Bitte hole den Code der Übung wieder hervor. Dieses Mal sollst du die beiden sections "SEO friendly" und "Portfolio Section" erstellen, nutze gerne die Befehle grid dafür.
+Die Farbe der Buttons "Read more" ist: #745cf9. Die Hover-Farbe ist: #5234f9.
+Die Farbe des <p>-Elements ist: #8c979e.
+Die Farbe der <h2> ist: #0e1015.
+*/
+
+body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 50px 80vh 20vh;
+    grid-template-areas:
+    "header"
+    "main";
+    grid-column: auto;
+    grid-row: auto;
+}
+
+header {
+    background-color: #F5F5F5;
+    grid-area: header;
+}
+
+main {
+    background-color: indianred;
+    grid-area: main;
+}
+
+section {
+    padding: 96px 171px;
+}
+
+img {
+    width: 50vw;
+
+
+}
+
+div {
+    display: grid;
+    grid-area: main;
+    place-items: start start;
+}
+
+
+h2 {
+    color: var(--h2-color: #0e1015);
+    font-size: 30px;
+    width: 360px;
+    height: auto;
+}
+
+p {
+    color: var(--p-color: #8c979e);
+    font-size: 14px;
+    margin-top: 2em;
+}
+
+a {
+    width: 200px;
+    height: 60px;
+    display: grid;
+    place-items: center center;
+    text-decoration: none;
+    margin-top: 2em;
+    color: white;
+    background-color: var(--button-color);
+}
+
+a:hover {
+    background-color: var(--button-color-hover);
+}
+
+.SEO__friendly {
+    grid-area: main;
+    display: grid;
+    place-items: center center;
+    place-self: start;
+    align-self: start;
+    background-color: white;
+}
+
+.Portfolio__Section {
+    grid-area: main;
+    display: grid;
+    place-items: end center;
+    place-self: start;
+    align-self: start;
+    background-color: #F5F5F5;
+}
+
+
+    /* justify-items: center;
+    align-items: center; */
+    /* shortcut => place-items */
+    place-items: center center;
+    /*
+    place-self: center;
+    align-self: start; 
+    */

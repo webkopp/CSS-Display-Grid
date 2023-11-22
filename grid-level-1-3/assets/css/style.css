@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.7em;
+}
+
+/* Verwende folgende Tags: <header>, <main>, <aside> und <footer>.
+Verwende unter anderem die Befehle: grid-template-columns, grid-template-rows, grid-column, grid-row. */
+
+body {
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 50px 80vh 20vh;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-column: auto;
+    grid-row: auto;
+    gap: 0.3em;
+    padding: 1em;
+    color: white;
+}
+
+header, aside, main, footer {
+    padding: 0.5em;
+}
+
+header {
+    background-color: blue;
+    grid-area: header;
+}
+
+aside {
+    background-color: green;
+    grid-area: aside;
+}
+
+main {
+    background-color: red;
+    grid-area: main;
+}
+
+footer {
+    background-color: purple;
+    grid-area: footer;
+}
